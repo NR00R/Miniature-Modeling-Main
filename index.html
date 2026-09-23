@@ -1240,7 +1240,7 @@ window.INJECTED_MAP_DATA = {"type":"FeatureCollection","features":[{"type":"Feat
         document.getElementById('stage1InfoBtn').addEventListener('click', () => {
             if (!currentActiveModel) return;
             // 將建築名稱進行 URL 編碼以防特殊字元造成網址失效
-            const targetUrl = `${ginfoPrefixUrl}${encodeURIComponent(currentActiveModel.title)}`;
+            const targetUrl = `${ginfoPrefixUrl}${encodeURIComponent(currentActiveModel.title.substring(4))}`;
             window.open(targetUrl, '_blank');
         });
 
